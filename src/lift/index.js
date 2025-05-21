@@ -1,6 +1,7 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 import { input, select } from '@inquirer/prompts';
+import { printHeader } from "./header";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -48,16 +49,6 @@ const prompt = {
 	roast: {
 		system: "You are being given the name of a developer. Generate a brief hyperbolic sentence expressing an obviously untrue concern about this developer's lack of technical abilities. The tone must be extremely professionalm, as if this were a confidential HR department memo. Do not use pronouns."
 	}
-}
-
-async function printHeader() {
-	console.clear();
-	console.log(`|=====================|`);
-	console.log(`|==|               |==|`);
-	console.log(`|==| B E A C O N S |==|`);
-	console.log(`|==|               |==|`);
-	console.log(`|=====================|`);
-	return;
 }
 
 async function getOutput() {
