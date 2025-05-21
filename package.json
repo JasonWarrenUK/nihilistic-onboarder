@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node src/index.js",
-    "lift": "node src/lift.js",
+    "lift": "node src/lift/index.js",
+    "album": "node src/album/index.js",
     "test": "test"
   },
   "author": "Jason Warren",
